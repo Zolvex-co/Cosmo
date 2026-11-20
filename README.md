@@ -2,7 +2,7 @@
 
 <h1>COSMO</h1>
 
-<p><b>Small bot. Big universe.</b><br>
+<p><b>A Simple Multi-Device WhatsApp Bot Built with Node.js.</b><br>
 Deploy anywhere and explore everything WhatsApp can do.</p>
 
 <p>
