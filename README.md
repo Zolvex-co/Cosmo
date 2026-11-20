@@ -2,8 +2,7 @@
 
 <h1>COSMO</h1>
 
-<p><b>A Simple Multi-Device WhatsApp Bot Built with Node.js.</b><br>
-Deploy anywhere and explore everything WhatsApp can do.</p>
+<p><b>COSMO Is A Simple Multi-Device WhatsApp Bot Built with Node.js.</b><br>
 
 <p>
   <a href="https://cosmo-xd.vercel.app"><img src="https://cosmo-shuhaiiiiib.onrender.com/f/tut26cQ3.jpg" alt="COSMO" height="28"><img src="https://img.shields.io/badge/WEBSITE-000000?style=for-the-badge" alt="WEBSITE"></a>
@@ -15,9 +14,6 @@ Deploy anywhere and explore everything WhatsApp can do.</p>
 
 ---
 
-***COSMO is a modular, multi-device WhatsApp bot built with Node.js and Baileys.***
-
----
 
 ## Features
 
