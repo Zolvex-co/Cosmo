@@ -1,0 +1,77 @@
+{
+  "name": "Cosmo-Bot",
+  "description": "Cosmo-Bot - a modular WhatsApp bot built with Node.js and Baileys.",
+  "keywords": [
+    "whatsapp",
+    "bot",
+    "baileys",
+    "nodejs"
+  ],
+  "stack": "container",
+  "env": {
+    "SESSION_ID": {
+      "description": "Your COSMO session ID, format COSMO~XXXXXXXX (kept private - never share it).",
+      "required": true
+    },
+    "SESSION_URL": {
+      "description": "Session generator URL. Default: https://zia-bot-l52t.onrender.com",
+      "required": false
+    },
+    "OWNER_NUMBER": {
+      "description": "Owner phone number with country code, digits only (comma separate several for sudo users).",
+      "required": true
+    },
+    "BOT_NAME": {
+      "description": "Display name of the bot.",
+      "value": "Cosmo",
+      "required": false
+    },
+    "PREFIX": {
+      "description": "Command prefix. Use several characters for several prefixes, or null for none.",
+      "value": ".",
+      "required": false
+    },
+    "MODE": {
+      "description": "public = everyone can use the bot, private = owner only.",
+      "value": "public",
+      "required": false
+    },
+    "BOT_LANG": {
+      "description": "Bot reply language: any file name from lib/lang (english, malayalam, manglish, hindi ...). Can also be changed with .lang",
+      "value": "english",
+      "required": false
+    },
+    "PING": {
+      "description": "Word the ping command replies with. Change later with .setping",
+      "value": "Cosmo",
+      "required": false
+    },
+    "MENU_INFO": {
+      "description": "Menu header: Name,Owner,image-url. Change later with .setmenuinfo",
+      "required": false
+    },
+    "CAPTION": {
+      "description": "Caption on downloaded media. Change later with .setcaption",
+      "value": "By Cosmo",
+      "required": false
+    },
+    "HEROKU_API_KEY": {
+      "description": "Heroku API key. Lets .setping / .setprefix ... update variables and restart by themselves.",
+      "required": false
+    },
+    "HEROKU_APP_NAME": {
+      "description": "Name of this Heroku app (needed together with HEROKU_API_KEY).",
+      "required": false
+    },
+    "GITHUB_TOKEN": {
+      "description": "Optional. GitHub token with the gist scope: lets .install read your private gists.",
+      "required": false
+    }
+  },
+  "formation": {
+    "worker": {
+      "quantity": 1,
+      "size": "basic"
+    }
+  }
+}

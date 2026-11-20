@@ -1,0 +1,39 @@
+# Render Blueprint for Cosmo-Bot.
+# SESSION_ID is downloaded on every start, so a persistent disk is optional. Without one (free
+# plan) runtime data such as custom triggers, warnings and installed plugins is lost on redeploy
+# (installed plugins are re-installed from PLUGIN_URLS, which the bot saves here by itself).
+# RENDER_API_KEY lets .setping / .setprefix / .setmode ... save the value on Render and redeploy
+# the bot by itself (Account Settings -> API Keys). RENDER_SERVICE_ID is added by Render.
+services:
+  - type: web
+    name: cosmo-bot
+    runtime: docker
+    dockerfilePath: ./Dockerfile
+    plan: free
+    healthCheckPath: /
+    autoDeploy: false
+    envVars:
+      - key: SESSION_ID
+        sync: false
+      - key: OWNER_NUMBER
+        sync: false
+      - key: RENDER_API_KEY
+        sync: false
+      - key: BOT_NAME
+        value: Cosmo
+      - key: PREFIX
+        value: "."
+      - key: MODE
+        value: public
+      - key: PING
+        value: Cosmo
+      - key: CAPTION
+        value: By Cosmo
+    # --- paid plans only: persistent storage for data/ ---
+    # plan: starter
+    # disk:
+    #   name: cosmo-data
+    #   mountPath: /var/data
+    #   sizeGB: 1
+    # and add:  - key: COSMO_DATA_DIR
+    #             value: /var/data

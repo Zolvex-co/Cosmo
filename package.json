@@ -1,0 +1,39 @@
+{
+  "name": "cosmo-bot",
+  "version": "1.0.0",
+  "description": "Cosmo-Bot - a modular WhatsApp bot powered by Node.js and Baileys.",
+  "author": "Shuhaib",
+  "private": true,
+  "license": "MIT",
+  "main": "index.js",
+  "engines": {
+    "node": ">=20.19.0"
+  },
+  "scripts": {
+    "start": "node index.js"
+  },
+  "keywords": [
+    "cosmo-bot",
+    "whatsapp-bot",
+    "baileys"
+  ],
+  "dependencies": {
+    "@whiskeysockets/baileys": "7.0.0-rc14",
+    "axios": "^1.20.0",
+    "dotenv": "^16.4.7",
+    "form-data": "^4.0.6",
+    "kollavarsham": "^2.5.4",
+    "node-webpmux": "^3.2.1",
+    "pdf-lib": "^1.17.1",
+    "pdfkit": "^0.17.0",
+    "pino": "^9.6.0",
+    "sharp": "^0.32.6",
+    "tesseract.js": "^5.1.1"
+  },
+  "optionalDependencies": {
+    "ffmpeg-static": "^5.3.0"
+  },
+  "devDependencies": {
+    "javascript-obfuscator": "^5.10.1"
+  }
+}
